@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Multiple Tabs and Search Example</title>
+  </head>
+  <body>
+    <button onclick="openTabs()">Open Multiple Tabs and Search</button>
+
+    <script>
+      function openTabs() {
+        // URLs to open in new tabs
+        const urls = [
+        "https://www.bing.com/search?q=Indian+traditional+clothing",
+"https://www.bing.com/search?q=Indian+cuisine+recipes",
+"https://www.bing.com/search?q=Indian+festivals+and+celebrations",
+"https://www.bing.com/search?q=Indian+classical+music+instruments",
+"https://www.bing.com/search?q=Indian+art+and+painting+styles",
+"https://www.bing.com/search?q=Indian+folk+dance+forms",
+"https://www.bing.com/search?q=Indian+religious+beliefs",
+"https://www.bing.com/search?q=Indian+architecture+and+monuments",
+"https://www.bing.com/search?q=Indian+languages+and+diversity",
+"https://www.bing.com/search?q=Indian+wedding+traditions",
+"https://www.bing.com/search?q=Indian+yoga+and+meditation",
+"https://www.bing.com/search?q=Indian+literature+and+authors",
+"https://www.bing.com/search?q=Indian+craftsmanship+and+artisans",
+"https://www.bing.com/search?q=Indian+history+and+dynasties",
+"https://www.bing.com/search?q=Indian+film+industry+Bollywood",
+"https://www.bing.com/search?q=Indian+folklore+and+mythology",
+"https://www.bing.com/search?q=Indian+tribal+cultures",
+"https://www.bing.com/search?q=Indian+rituals+and+ceremonies",
+"https://www.bing.com/search?q=Indian+gods+and+goddesses",
+"https://www.bing.com/search?q=Indian+textiles+and+fabrics",
+        ];
+
+        // Function to open tabs with a delay
+        function openTabWithDelay(index) {
+          if (index < urls.length) {
+            window.open(urls[index], "_blank");
+            setTimeout(function () {
+              openTabWithDelay(index + 1);
+            }, 2000); // Open the next tab after a 1-second delay
+          }
+        }
+
+        openTabWithDelay(0); // Start opening tabs from the first URL
+      }
+    </script>
+  </body>
+</html>
